@@ -6,9 +6,10 @@ const express = require('express')
     , session = require('express-session')
     , port = 3000
 
-app.use(cors())
-app.use(bodyParser.json())
+app.use(cors());
+app.use(bodyParser.json());
+app.use("/", express.static(__dirname + '/public'));
 
 app.listen(port, function () {
-    console.log('listening on port ', port)
-})
+    console.log('listening on port', port)
+});
