@@ -15,20 +15,19 @@
 </head>
 
 <body>
-<!--move top nav bar up for reading when scrolling down like "https://egghead.io/courses/angularjs-fundamentals"-->
-    index.html test
-    <div ng-init="test='Hello World!'">
-        <div>
-            {{test}}
-        </div>
+    <!--move top nav bar up for reading when scrolling down like "https://egghead.io/courses/angularjs-fundamentals"-->
+    <div ng-controller="homeCtrl">
+
     </div>
 
 
     <ui-view></ui-view>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
-  
-  <script src="public/app.js"></script>
+
+    <script src="./app.js"></script>
+    <script src="./views/home/homeCtrl.js"></script>
+    <script src="./views/home/homeService.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
