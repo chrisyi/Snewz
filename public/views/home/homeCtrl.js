@@ -1,12 +1,12 @@
 angular.module('app')
-    .controller('homeCtrl', function ($scope, homeService) {
+    .controller('homeCtrl', ($scope, $window, homeService) => {
 
         $scope.test = 'home page success'
 
-        homeService.getIGN().then(response=>
+        homeService.getArticle().then(response=>
         console.log(response))
         
-
+        $scope.redirectToUrl = () => $window.open(ar)
 
 
     })
