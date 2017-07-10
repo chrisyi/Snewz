@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('homeCtrl', ($scope, $window, homeService) => {
+    .controller('homeCtrl', function($scope, $window, homeService) { //cannot use es6 in controller
 
         $scope.test = 'home page success'
 
