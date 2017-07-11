@@ -4,12 +4,11 @@ const express = require('express')
     , app = express()
     , massive = require('massive')
     , session = require('express-session')
-    , port = 3000
+
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/", express.static(__dirname + '/public'));
 
-app.listen(port, function () {
-    console.log('listening on port', port)
-});
+const port = 3000;
+app.listen(port, () => { console.log('listening on port', port) });
