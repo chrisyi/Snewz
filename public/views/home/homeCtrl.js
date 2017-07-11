@@ -8,5 +8,11 @@ angular.module('app')
         
         $scope.redirectToUrl = () => $window.open(ar)
 
+$scope.newChoice = function (string){
+    homeService.getArticle(string).then(function (response) {
+        console.log(response)
+        $scope.newsData = response;
+    })
+}
 
     })

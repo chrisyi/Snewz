@@ -1,52 +1,67 @@
-<head>
-
-</head>
-
 <body>
-    <div>
+
+    <div class="title">
         Title
     </div>
-    <div>
-        Home Saved Ranking
-    </div>
-    <div class="dropdown">
-        
-        <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="true">
-            Sources
-                <span class="caret"></span>
-                </button>
-        <ul class="dropdown-menu multi-column columns-3 col-sm-8" aria-labelledby="dropdownMenu">
-            <div class="row">
-                <div class="col-sm-4">
-                    <ul class="multi-column-dropdown">
-                        <li>News</li>
-                        <li class="divider"></li>
-                        <li><a href="">Associated Press</a></li>
-                        <li><a href="">Google News</a></li>
-                        <li><a href="">Reuters</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4">
-                    <ul class="multi-column-dropdown">
-                        <li>Tech</li>
-                        <li class="divider"></li>
-                        <li><a href="">Hacker News</a></li>
-                        <li><a href="">Recode</a></li>
-                        <li><a href="">Tech Crunch</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4">
-                    <ul class="multi-column-dropdown">
-                        <li>Entertainment</li>
-                        <li class="divider"></li>
-                        <li><a href="">IGN</a></li>
-                        <li><a href="">Polygon</a></li>
-                        <li><a href="">Reddit</a></li>
-                    </ul>
-                </div>
+    <div class="container-fluid">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
             </div>
-        </ul>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sources <b class="caret"></b></a>
+                        <ul class="dropdown-menu multi-column columns-3">
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+                                    <li class="list-inline center-block text-center">News</li>
+                                    <li class="divider"></li>
+                                    <li><a ng-click="newChoice('associated-press')" href="#">Associated Press</a></li>
+                                    <li><a ng-click="newChoice('google-news')" href="#">Google News</a></li>
+                                    <li><a ng-click = "newChoice('reuters')" href="#">Reuters</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+                                    <li class="list-inline center-block text-center">Tech</li>
+                                    <li class="divider"></li>
+                                    <li><a ng-click = "newChoice('hacker-news')" href="#">Hacker News</a></li>
+                                    <li><a ng-click = "newChoice('recode')" href="#">Recode</a></li>
+                                    <li><a ng-click = "newChoice('techcrunch')" href="#">Tech Crunch</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="multi-column-dropdown">
+                                    <li class="list-inline center-block text-center">Entertainment</li>
+                                    <li class="divider"></li>
+                                    <li><a ng-click = "newChoice('ign')" href="#">IGN</a></li>
+                                    <li><a ng-click = "newChoice('polygon')" href="#">Polygon</a></li>
+                                    <li><a ng-click = "newChoice('reddit-r-all')" href="#">Reddit</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#">Saved</a></li>
+                    <li><a href="#">Ranking</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
+    <div class="container-fluid">
+        <div class="article-cards col-sm-6">
+            <div class="row col-sm-6" ng-repeat="news in newsData">
+                <img ng-src="{{news.UrlImage}}"/>
+            </div>
+        </div>
+    </div>
+
+
 
 </body>

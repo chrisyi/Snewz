@@ -1,8 +1,8 @@
 angular.module('app')
     .service('homeService', function ($http) {
 
-        this.getArticle = () => {
-            return $http.get('https://newsapi.org/v1/articles?source=ign&sortBy=top&apiKey=acf1c82a9fd748e9a4a5addd2be61367')
+        this.getArticle = (string) => {
+            return $http.get('https://newsapi.org/v1/articles?source=' + string + '&sortBy=top&apiKey=acf1c82a9fd748e9a4a5addd2be61367')
                 .then(response => {
                     // console.log(response);
                     const articleArray = [];
