@@ -93,3 +93,15 @@
 .newsBorder {
     border: 1px solid black
 }
+#savedNewsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hidden {
+    display: none;
+}
+#hideArticles {
+    display: none;
+}

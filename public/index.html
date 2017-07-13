@@ -19,13 +19,10 @@
 
 <body>
     <!--move top nav bar up for reading when scrolling down like "https://egghead.io/courses/angularjs-fundamentals"-->
-    <div data-ng-controller="homeCtrl">
-
-
-
-        
-    </div>
-
+    <header>
+        <h1>News Site</h1>
+    </header>
+    <nav-component></nav-component>   
     <ui-view></ui-view>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
@@ -35,6 +32,7 @@
     <script src="./views/home/homeService.js"></script>
     <script src="./views/saved/savedCtrl.js"></script>
     <script src="./views/saved/savedService.js"></script>
+    <script src="./components/navComponent/navComponent.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"

@@ -16,13 +16,15 @@ massive(connectionString).then(dbInstance => {
 
 
 app.post('/savedArticles', function (req, res, next) {
-    console.log('index.js');
-    console.log(req.body.Author);
+    console.log(req.body);
     
     var db = req.app.get('db');
     db.create_article([req.body.Author, req.body.Description, req.body.Title, req.body.Url, req.body.UrlImage])
         .then(response => res.status(200).json(response))
-        .catch(err => res.status(404).json(response))
+        .catch(err => {
+            console.log(err)
+            res.status(500).json(response)
+        })
 })
 app.get('/savedArticles', function (req, res, next) {
     var db = req.app.get('db');

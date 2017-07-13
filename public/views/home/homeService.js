@@ -22,10 +22,6 @@ angular.module('app')
                 })
         }
 
-        this.saveArticle = function (article) {
-            console.log('hello from homeServices');
-            return $http.post('/savedArticles', article)
-        }
 
 
 

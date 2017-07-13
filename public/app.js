@@ -2,7 +2,7 @@ angular.module('app', ['ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
-                url: '/',
+                url: '/home/:source',
                 templateUrl: './views/home/home.html',
                 controller: 'homeCtrl'
             })
@@ -12,5 +12,5 @@ angular.module('app', ['ui.router'])
                 controller: 'savedCtrl'
             })
         $urlRouterProvider
-            .otherwise('/')
+            .otherwise('/home/associated-press')
     })
