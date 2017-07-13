@@ -1,5 +1,4 @@
-<body>
-    <div class="title">
+<div class="title">
             Title
         </div>
         <div class="container-fluid">
@@ -54,14 +53,14 @@
       </nav>
    </div>
     
-   <div class="newsContainer">
-       <div ng-repeat="news in newsData" ng-click="redirectToUrl(news.Url)">
+
+
+<div class="newsContainer" >
+       <div ng-repeat="article in savedArticles" ng-click="redirectToUrl(article.url)">
            <div class="newsBorder text-center">
-               <img class="newsImage" ng-src="{{news.UrlImage}}">
-                <p class="text-center">{{news.Title}}</p>
-                <button class="btn btn-default text-center" type="submit" ng-click="saveArticle(news)" >Save</button>
+               <img class="newsImage" ng-src="{{article.urlimage}}">
+                <p class="text-center">{{article.title}}</p>
+                <button class="btn btn-default text-center" type="submit">Delete</button>
            </div>        
        </div>
    </div>
-
-</body>

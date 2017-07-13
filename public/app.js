@@ -6,10 +6,10 @@ angular.module('app', ['ui.router'])
                 templateUrl: './views/home/home.html',
                 controller: 'homeCtrl'
             })
-            .state('newschoice', {
-                url: '/newschoice/:news',
-                templateUrl: '../views/newsChoice/newsChoice.html',
-                controller: 'newsChoiceCtrl'
+            .state('saved', {
+                url: '/saved',
+                templateUrl: '../views/saved/saved.html',
+                controller: 'savedCtrl'
             })
         $urlRouterProvider
             .otherwise('/')

@@ -1,0 +1,1 @@
+SELECT * FROM articlestable WHERE id = $1;
