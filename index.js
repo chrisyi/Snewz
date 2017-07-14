@@ -40,6 +40,6 @@ app.delete('/deleteArticle/:id', function (req, res, next) {
 })
 
 // const port = 3000;
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}.`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server listening on port port 3000.`);
 });
