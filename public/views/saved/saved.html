@@ -2,9 +2,9 @@
     <div class="title">
         Title
     </div>
-
+    <format-component news-data="newsData" button-fn="deleteArticle(article)" redirect-fn="redirectToUrl(article)" button-label="Delete"></format-component>
     <!--saved articles  -->
-    <div class="newsContainer">
+    <!-- <div class="newsContainer">
         <div ng-repeat="article in newsData" ng-click="redirectToUrl(article.Url)">
             <div class="newsBorder text-center">
                 <img class="newsImage" ng-src="{{article.UrlImage}}">
@@ -12,6 +12,6 @@
                 <button class="btn btn-default text-center" type="submit">Delete</button>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 

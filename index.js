@@ -17,7 +17,7 @@ massive(connectionString).then(dbInstance => {
 
 app.post('/savedArticles', function (req, res, next) {
     console.log(req.body);
-    
+
     var db = req.app.get('db');
     db.create_article([req.body.Author, req.body.Description, req.body.Title, req.body.Url, req.body.UrlImage])
         .then(response => res.status(200).json(response))
@@ -32,7 +32,12 @@ app.get('/savedArticles', function (req, res, next) {
         .then(response => res.status(200).json(response))
         .catch(err => res.status(404).json(response))
 })
-
+app.delete('/deleteArticle/:id', function (req, res, next) {
+    var db = req.app.get('db')
+    db.delete_article(req.params.id)
+        .then(response => res.status(200).json(response))
+        .catch(err => res.status(404).json(response))
+})
 
 
 const port = 3000;

@@ -26,12 +26,13 @@ angular.module('app')
         }
         $scope.newsChoice($stateParams.source)
 
-        $scope.redirectToUrl = function (url) {
-            console.log(url)
-            $window.open(url)
+        $scope.redirectToUrl = function (article) {
+            console.log('hii')
+            $window.open(article.Url)
         }
 
         $scope.saveArticle = function (article) {
+            console.log("Saving", article)
             article.saved = true;
             savedService.saveArticle(article);
         }
