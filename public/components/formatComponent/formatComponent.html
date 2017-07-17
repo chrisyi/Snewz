@@ -1,12 +1,33 @@
-  <div class="newsContainer">
+<!--
+<div class="newsContainer">
     <div ng-repeat="article in fc.newsData">
         <div class="newsBorder text-center">
-            <div ng-click="fc.redirectFn({article: article})"><!--first article is from saved.html and second article is from this file-->
+            <div ng-click="fc.redirectFn({article: article})">
+                <!--first article is from saved.html and second article is from this file
                 <img class="newsImage" ng-src="{{article.UrlImage}}">
                 <p class="text-center">{{article.Title}}</p>
             </div>
-            <button ng-if="!article.saved" class="btn btn-default text-center" type="submit" ng-click="fc.buttonFn({article: article})">{{fc.buttonLabel}}</button> 
+            <button ng-if="!article.saved" class="btn btn-default text-center" type="submit" ng-click="fc.buttonFn({article: article})">{{fc.buttonLabel}}</button>
             <button ng-if="article.saved" class="btn btn-default text-center" type="submit">Saved</button>
         </div>
     </div>
-</div>  
+</div>   
+-->
+
+<div class="container-fluid ">
+    <div class="row">
+        <div ng-repeat="article in fc.newsData | limitTo: items.length /2: 0" class="afterrow col-xs-12 col-sm-6">
+            <div class="thumbnail">
+                <div ng-click="fc.redirectFn({article: article})" class="pointer">
+                    <!--first article is from saved.html and second article is from this file-->
+                    <img class="center-block img-responsive" ng-src="{{article.UrlImage}}">
+                    <p class="text-center">{{article.Title}}</p>
+                </div>
+                <div class="text-center">
+                    <button ng-if="!article.saved" class="btn btn-default text-center" type="submit" ng-click="fc.buttonFn({article: article})">{{fc.buttonLabel}}</button>
+                    <button ng-if="article.saved" class="btn btn-default text-center" type="submit">Saved</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
