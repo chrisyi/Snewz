@@ -15,6 +15,13 @@ massive(process.env.DATABASE_URL).then(dbInstance => {
     app.set('db', dbInstance)
 })
 
+app.get('/savedArticles', function (req, res, next) {
+    var db = req.app.get('db');
+    db.read_articles()
+        .then(response => res.status(200).json(response))
+        .catch(err => res.status(404).json(response))
+})
+
 app.post('/savedArticles', function (req, res, next) {
     console.log(req.body);
 
@@ -26,12 +33,7 @@ app.post('/savedArticles', function (req, res, next) {
             res.status(500).json(response)
         })
 })
-app.get('/savedArticles', function (req, res, next) {
-    var db = req.app.get('db');
-    db.read_articles()
-        .then(response => res.status(200).json(response))
-        .catch(err => res.status(404).json(response))
-})
+
 app.delete('/deleteArticle/:id', function (req, res, next) {
     var db = req.app.get('db')
     db.delete_article(req.params.id)
