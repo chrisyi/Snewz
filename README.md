@@ -1,11 +1,9 @@
 # Snewz
 
 
-Full Stack Web App using Angular, Node, PostgresSQL
-
 URL: https://snewz.herokuapp.com/
 
-- Built with HTML/CSS, AngularJS, NodeJS, Express, and PostgresSQL
+- Built with HTML/CSS, AngularJS, Node.js, Express.js, and PostgreSQL
 
 - Save news articles to read for later
 
